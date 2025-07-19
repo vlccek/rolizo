@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: main # or master, depending on your repo
+
+media_folder: "static/uploads" # Folder where media files will be stored
+public_folder: "/uploads" # The src attribute for uploaded media will begin with this path
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/_index.md"
+        label: "Homepage"
+        name: "homepage"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "content/kontakty.md"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "content/produkty/_index.md"
+        label: "Products Page"
+        name: "products"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "commissions"
+    label: "Commissions"
+    folder: "content/produkty"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - name: "photos"
+        label: "Photo Gallery"
+        widget: "list"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Location", name: "location", widget: "string" }

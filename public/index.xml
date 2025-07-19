@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Jul 2025 12:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Example Commission</title>
+      <link>http://localhost:1313/produkty/example-commission/</link>
+      <pubDate>Sat, 19 Jul 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/produkty/example-commission/</guid>
+      <description>&lt;p&gt;This is the main content of the commission, which won&amp;rsquo;t be displayed in the list or single templates but could be used if you extend the layouts.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

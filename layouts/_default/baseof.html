@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .Title }}</title>
+</head>
+<body>
+    <header>
+        <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+        <nav>
+            <a href="{{ .Site.BaseURL }}">Home</a>
+            <a href="{{ "/produkty" | relURL }}">Portfolio</a>
+            <a href="{{ "/kontakty" | relURL }}">Contact</a>
+        </nav>
+    </header>
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    <footer>
+        <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
+    </footer>
+</body>
+</html>

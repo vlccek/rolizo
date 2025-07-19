@@ -1,0 +1,21 @@
+{{ define "main" }}
+    <article>
+        <h2>{{ .Title }}</h2>
+        <p>Completed on: {{ .Date.Format "January 2, 2006" }}</p>
+        
+        <h3>Photo Gallery</h3>
+        <div>
+            {{ with .Params.photos }}
+                {{ range . }}
+                    <figure>
+                        <img src="{{ .image | relURL }}" alt="{{ .description }}">
+                        <figcaption>
+                            <p>{{ .description }}</p>
+                            {{ with .location }}<p><em>Location: {{ . }}</em></p>{{ end }}
+                        </figcaption>
+                    </figure>
+                {{ end }}
+            {{ end }}
+        </div>
+    </article>
+{{ end }}
